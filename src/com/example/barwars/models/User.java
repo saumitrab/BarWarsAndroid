@@ -9,19 +9,18 @@ import com.example.barwars.MainActivity;
 import android.provider.Settings.Secure;
 
 public class User {
+	private String UUID;
+	private String displayName;
+	private String profileImage;
 	
-	String UUID;
-	String displayName;
-	String profileImage;
-	
-	long solvedChallengesCount;
-	long submittedChallengesCount;
-	long points;
+	private long solvedChallengesCount;
+	private long submittedChallengesCount;
+	private long points;
 	
 	//Challenge localSolved[];
 	//Challenge localSubmitted[];
-	Challenge unsolvedChallenges[];
-	Challenge challengeToSubmit;
+	private Challenge challengesList[];
+	private Challenge challengeToSubmit;
 
 	public User() {
 		
@@ -80,12 +79,12 @@ public class User {
 		this.points = points;
 	}
 
-	public Challenge[] getUnsolvedChallenges() {
-		return unsolvedChallenges;
+	public Challenge[] getChallengesList() {
+		return challengesList;
 	}
 
-	public void setUnsolvedChallenges(Challenge[] unsolvedChallenges) {
-		this.unsolvedChallenges = unsolvedChallenges;
+	public void setchallengesList(Challenge[] challengesList) {
+		this.challengesList = challengesList;
 	}
 
 	public Challenge getChallengeToSubmit() {
